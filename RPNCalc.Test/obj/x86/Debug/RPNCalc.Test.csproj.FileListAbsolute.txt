@@ -1,0 +1,6 @@
+C:\Code\CSharp_RPNCalc-0.3\build\RPNCalc.Test.dll
+C:\Code\CSharp_RPNCalc-0.3\build\RPNCalc.Test.pdb
+C:\Code\CSharp_RPNCalc-0.3\RPNCalc.Test\obj\x86\Debug\RPNCalc.Test.csprojResolveAssemblyReference.cache
+C:\Code\CSharp_RPNCalc-0.3\RPNCalc.Test\obj\x86\Debug\RPNCalc.Test.csproj.CoreCompileInputs.cache
+C:\Code\CSharp_RPNCalc-0.3\RPNCalc.Test\obj\x86\Debug\RPNCalc.Test.dll
+C:\Code\CSharp_RPNCalc-0.3\RPNCalc.Test\obj\x86\Debug\RPNCalc.Test.pdb

@@ -1,0 +1,8 @@
+C:\EPAD\Student\Projects\CSharp_RPNCalc-0.3\build\RPNCalculator.exe.config
+C:\Code\CSharp_RPNCalc-0.3\build\RPNCalculator.exe.config
+C:\Code\CSharp_RPNCalc-0.3\build\RPNCalculator.exe
+C:\Code\CSharp_RPNCalc-0.3\build\RPNCalculator.pdb
+C:\Code\CSharp_RPNCalc-0.3\RPNCalc\obj\x86\Debug\RPNCalc.csprojResolveAssemblyReference.cache
+C:\Code\CSharp_RPNCalc-0.3\RPNCalc\obj\x86\Debug\RPNCalc.csproj.CoreCompileInputs.cache
+C:\Code\CSharp_RPNCalc-0.3\RPNCalc\obj\x86\Debug\RPNCalculator.exe
+C:\Code\CSharp_RPNCalc-0.3\RPNCalc\obj\x86\Debug\RPNCalculator.pdb

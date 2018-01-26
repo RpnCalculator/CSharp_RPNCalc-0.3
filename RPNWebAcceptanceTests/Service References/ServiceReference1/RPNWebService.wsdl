@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RPNCalculateEasyAddition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="firstOperand" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="secondOperand" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RPNCalculateEasyAdditionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RPNCalculateEasyAdditionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RPNCalculateEasySubtraction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="firstOperand" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="secondOperand" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RPNCalculateEasySubtractionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RPNCalculateEasySubtractionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RPNCalculateCalculateFromStream">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listOfTokens" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RPNCalculateCalculateFromStreamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RPNCalculateCalculateFromStreamResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RPNCalculateEasyAdditionSoapIn">
+    <wsdl:part name="parameters" element="tns:RPNCalculateEasyAddition" />
+  </wsdl:message>
+  <wsdl:message name="RPNCalculateEasyAdditionSoapOut">
+    <wsdl:part name="parameters" element="tns:RPNCalculateEasyAdditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RPNCalculateEasySubtractionSoapIn">
+    <wsdl:part name="parameters" element="tns:RPNCalculateEasySubtraction" />
+  </wsdl:message>
+  <wsdl:message name="RPNCalculateEasySubtractionSoapOut">
+    <wsdl:part name="parameters" element="tns:RPNCalculateEasySubtractionResponse" />
+  </wsdl:message>
+  <wsdl:message name="RPNCalculateCalculateFromStreamSoapIn">
+    <wsdl:part name="parameters" element="tns:RPNCalculateCalculateFromStream" />
+  </wsdl:message>
+  <wsdl:message name="RPNCalculateCalculateFromStreamSoapOut">
+    <wsdl:part name="parameters" element="tns:RPNCalculateCalculateFromStreamResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RPNWebServiceSoap">
+    <wsdl:operation name="RPNCalculateEasyAddition">
+      <wsdl:input message="tns:RPNCalculateEasyAdditionSoapIn" />
+      <wsdl:output message="tns:RPNCalculateEasyAdditionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RPNCalculateEasySubtraction">
+      <wsdl:input message="tns:RPNCalculateEasySubtractionSoapIn" />
+      <wsdl:output message="tns:RPNCalculateEasySubtractionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RPNCalculateCalculateFromStream">
+      <wsdl:input message="tns:RPNCalculateCalculateFromStreamSoapIn" />
+      <wsdl:output message="tns:RPNCalculateCalculateFromStreamSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RPNWebServiceSoap" type="tns:RPNWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RPNCalculateEasyAddition">
+      <soap:operation soapAction="http://tempuri.org/RPNCalculateEasyAddition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RPNCalculateEasySubtraction">
+      <soap:operation soapAction="http://tempuri.org/RPNCalculateEasySubtraction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RPNCalculateCalculateFromStream">
+      <soap:operation soapAction="http://tempuri.org/RPNCalculateCalculateFromStream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RPNWebServiceSoap12" type="tns:RPNWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RPNCalculateEasyAddition">
+      <soap12:operation soapAction="http://tempuri.org/RPNCalculateEasyAddition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RPNCalculateEasySubtraction">
+      <soap12:operation soapAction="http://tempuri.org/RPNCalculateEasySubtraction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RPNCalculateCalculateFromStream">
+      <soap12:operation soapAction="http://tempuri.org/RPNCalculateCalculateFromStream" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RPNWebService">
+    <wsdl:port name="RPNWebServiceSoap" binding="tns:RPNWebServiceSoap">
+      <soap:address location="http://localhost:58686/PRNWeb/WebServices/RPNWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RPNWebServiceSoap12" binding="tns:RPNWebServiceSoap12">
+      <soap12:address location="http://localhost:58686/PRNWeb/WebServices/RPNWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
